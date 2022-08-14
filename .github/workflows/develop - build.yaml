@@ -7,7 +7,7 @@ on:
 
 env:
   BuildConfiguration: debug
-  CoreProject: Src/Pug.Effable/Pug.Effable.csproj
+  CoreProject: src/Pug.Effable/Pug.Effable.csproj
   
 jobs:
   build:
