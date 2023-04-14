@@ -1,6 +1,6 @@
 namespace Pug.Effable
 {
-	public interface IIdentifiableNamedEntity<TIdentifier, TName> : Identifiable<TIdentifier>, INamed<TName>
+	public interface IIdentifiableNamedEntity<TIdentifier, TName> : IEntityInfo<TIdentifier>, INamed<TName>
 	{
 		
 	}
