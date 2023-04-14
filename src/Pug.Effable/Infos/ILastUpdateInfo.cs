@@ -3,6 +3,7 @@ using System.Runtime.Serialization;
 
 namespace Pug.Effable
 {
+	[Obsolete("Use the more generic IActionContext interface instead.")]
 	public interface ILastUpdateInfo<TEntityVersionUser>
 	{
 		[DataMember(IsRequired = true)]
@@ -12,6 +13,7 @@ namespace Pug.Effable
 		TEntityVersionUser LastUpdateUser { get; set; }
 	}
 	
+	[Obsolete("Use the more generic IActionContext interface instead.")]
 	public interface ILastUpdateInfo : ILastUpdateInfo<string>
 	{
 	
