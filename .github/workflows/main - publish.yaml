@@ -25,19 +25,16 @@ jobs:
         env:
           NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
       
-      - name: Build Core project
+      - name: Build project
         run: dotnet build --nologo --configuration ${{env.BuildConfiguration}} ${{env.CoreProject}}
         
       - name: Create packages base folder
         run: mkdir packages
         
-      - name: Pack Core project
+      - name: Pack project
         run: dotnet pack --output ${{env.PackagesBaseFolder}} --nologo --configuration ${{env.BuildConfiguration}} ${{env.CoreProject}}
 
-      - name: Publish Core NuGet package
-        run: dotnet nuget push ${{env.PackagesBaseFolder}}/*.nupkg --skip-duplicate
-
-      - name: Publish Core NuGet package to NuGet.org
+      - name: Publish NuGet package to NuGet.org
         run: dotnet nuget push ${{env.PackagesBaseFolder}}/*.nupkg --api-key ${{secrets.NUGET_ORG}} --source https://api.nuget.org/v3/index.json --skip-duplicate
 
       - name: Clear packages folder
