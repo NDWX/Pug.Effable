@@ -3,6 +3,7 @@ using System.Runtime.Serialization;
 
 namespace Pug.Effable
 {
+	[Obsolete("Use the more generic ActionContext class instead.")]
 	[DataContract]
 	public class RegistrationInfo<TEntityVersionUser> : IRegistrationInfo<TEntityVersionUser>
 	{
@@ -13,6 +14,7 @@ namespace Pug.Effable
 		public TEntityVersionUser RegistrationUser { get; set; }
 	}
 
+	[Obsolete("Use the more generic ActionContext class instead.")]
 	[DataContract]
 	public class RegistrationInfo : RegistrationInfo<string>
 	{
