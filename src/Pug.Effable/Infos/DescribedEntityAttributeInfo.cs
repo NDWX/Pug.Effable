@@ -17,6 +17,14 @@ namespace Pug.Effable
 		}
 
 		[DataMember(IsRequired = true)]
-		public TDescription Description { get; set; }
+		public TDescription Description 
+	{
+		get;
+#if NETSTANDARD2_0
+		set;
+#else
+		init;
+#endif
+	}
 	}
 }

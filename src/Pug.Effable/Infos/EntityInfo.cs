@@ -13,6 +13,14 @@ namespace Pug.Effable
 		}
 
 		[DataMember(IsRequired = true)]
-		public TIdentifier Identifier { get; set; }
+		public TIdentifier Identifier 
+	{
+		get;
+#if NETSTANDARD2_0
+		set;
+#else
+		init;
+#endif
+	}
 	}
 }

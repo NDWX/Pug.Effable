@@ -8,11 +8,27 @@ namespace Pug.Effable
 		/// <summary>
 		/// TYpe of entity being referenced
 		/// </summary>
-		string Type { get; set; }
+		string Type 
+	{
+		get;
+#if NETSTANDARD2_0
+		set;
+#else
+		init;
+#endif
+	}
         
 		/// <summary>
 		/// Identifier of entity being referenced
 		/// </summary>
-		string Identifier { get; set; }
+		string Identifier 
+	{
+		get;
+#if NETSTANDARD2_0
+		set;
+#else
+		init;
+#endif
+	}
 	}
 }

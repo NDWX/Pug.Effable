@@ -17,9 +17,25 @@ namespace Pug.Effable
 		}
 
 		[DataMember(IsRequired = true)]
-		public TKey Name { get; set; }
+		public TKey Name 
+	{
+		get;
+#if NETSTANDARD2_0
+		set;
+#else
+		init;
+#endif
+	}
 
 		[DataMember(IsRequired = true)]
-		public TValue Value { get; set; }
+		public TValue Value 
+	{
+		get;
+#if NETSTANDARD2_0
+		set;
+#else
+		init;
+#endif
+	}
 	}
 }

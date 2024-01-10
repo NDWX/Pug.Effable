@@ -10,14 +10,22 @@ namespace Pug.Effable
 		DateTime RegistrationTimestamp
 		{
 			get;
-			set;
+#if NETSTANDARD2_0
+		set;
+#else
+			init;
+#endif
 		}
 
 		[DataMember(IsRequired = true)]
 		TEntityVersionUser RegistrationUser
 		{
 			get;
-			set;
+#if NETSTANDARD2_0
+		set;
+#else
+			init;
+#endif
 		}
 	}
 }

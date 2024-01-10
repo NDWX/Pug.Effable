@@ -15,9 +15,25 @@ namespace Pug.Effable
 	public class CreationInfo<TEntityVersionInfo> : ICreationInfo<TEntityVersionInfo>
 	{
 		[DataMember(IsRequired = true)]
-		public TEntityVersionInfo CreateUser { get; set; }
+		public TEntityVersionInfo CreateUser 
+	{
+		get;
+#if NETSTANDARD2_0
+		set;
+#else
+		init;
+#endif
+	}
 		
 		[DataMember(IsRequired = true)]
-		public DateTime CreateTimestamp { get; set; }
+		public DateTime CreateTimestamp 
+	{
+		get;
+#if NETSTANDARD2_0
+		set;
+#else
+		init;
+#endif
+	}
 	}
 }
