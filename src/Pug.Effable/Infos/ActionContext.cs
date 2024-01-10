@@ -19,18 +19,15 @@ namespace Pug.Effable
 		
 		[DataMember(IsRequired = true)]
 		public DateTime Timestamp 
-	{
-		get;
-#if NETSTANDARD2_0
-		set;
-#else
-		init;
-#endif
-	}
+		{
+			get;
+	#if NETSTANDARD2_0
+			set;
+	#else
+			init;
+	#endif
+		}
 	}
 
-	public class ActionContext : ActionContext<IReference>, IActionContext
-	{
-		
-	}
+	public class ActionContext : ActionContext<IReference>, IActionContext { }
 }
