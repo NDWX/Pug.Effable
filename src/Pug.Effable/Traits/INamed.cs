@@ -8,4 +8,8 @@
 			set;
 		}
 	}
+
+	public interface INamed : INamed<string>
+	{
+	}
 }

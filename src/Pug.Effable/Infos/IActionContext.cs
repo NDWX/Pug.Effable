@@ -8,4 +8,8 @@ namespace Pug.Effable
 		
 		DateTime Timestamp { get; set; }
 	}
+
+	public interface IActionContext : IActionContext<string>
+	{
+	}
 }
