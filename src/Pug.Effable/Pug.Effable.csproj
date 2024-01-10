@@ -35,5 +35,6 @@
       <Compile Remove="Infos\LastModificationInfo.cs" />
       <Compile Remove="Infos\ICreationInfo.cs" />
       <Compile Remove="Infos\CreationInfo.cs" />
+      <Compile Remove="IReferenceInfo.cs" />
     </ItemGroup>
 </Project>
