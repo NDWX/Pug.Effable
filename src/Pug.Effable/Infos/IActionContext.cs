@@ -2,14 +2,34 @@ using System;
 
 namespace Pug.Effable
 {
-	public interface IActionContext<TUser>
+	public interface IActionContext<TActor>
 	{
-		TUser User { get; set; }
+		TActor Actor 
+	{
+		get;
+#if NETSTANDARD2_0
+		set;
+#else
+		init;
+#endif
+	}
 		
-		DateTime Timestamp { get; set; }
+		DateTime Timestamp 
+	{
+		get;
+#if NETSTANDARD2_0
+		set;
+#else
+		init;
+#endif
+	}
 	}
 
-	public interface IActionContext : IActionContext<string>
+	public interface IActionContext : IActionContext<IReference>
+	{
+	}
+
+	public interface IUserActionContext : IActionContext<string>
 	{
 	}
 }

@@ -6,7 +6,15 @@ namespace Pug.Effable
 	public class NamedEntity<TName> : INamed<TName>
 	{
 		[DataMember(IsRequired = true)]
-		public TName Name { get; set; }
+		public TName Name 
+	{
+		get;
+#if NETSTANDARD2_0
+		set;
+#else
+		init;
+#endif
+	}
 	}
 	
 	[DataContract]

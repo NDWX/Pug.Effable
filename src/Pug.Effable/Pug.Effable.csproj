@@ -1,7 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-	    <TargetFrameworks>netstandard1.3; netstandard2.0;</TargetFrameworks>
+	    <TargetFrameworks>netstandard2.0; net5.0</TargetFrameworks>
+        <LangVersion>11</LangVersion>
         <Title>Pug.Effable</Title>
         <Authors>Andrian</Authors>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -25,5 +26,14 @@
 
     <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
       <PackageReference Include="System.Runtime.Serialization.Primitives" Version="4.3.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="Infos\ILastUpdateInfo.cs" />
+      <Compile Remove="Infos\IUpdateInfo.cs" />
+      <Compile Remove="Infos\LastLastUpdateInfo.cs" />
+      <Compile Remove="Infos\LastModificationInfo.cs" />
+      <Compile Remove="Infos\ICreationInfo.cs" />
+      <Compile Remove="Infos\CreationInfo.cs" />
     </ItemGroup>
 </Project>

@@ -12,9 +12,25 @@ namespace Pug.Effable
 	public class IdentifiableNamedEntity<TIdentifier, TName> : IIdentifiableNamedEntity<TIdentifier, TName>
 	{
 		[DataMember(IsRequired = true)]
-		public TIdentifier Identifier { get; set; }
+		public TIdentifier Identifier 
+	{
+		get;
+#if NETSTANDARD2_0
+		set;
+#else
+		init;
+#endif
+	}
 		
 		[DataMember(IsRequired = true)]
-		public TName Name { get; set; }
+		public TName Name 
+	{
+		get;
+#if NETSTANDARD2_0
+		set;
+#else
+		init;
+#endif
+	}
 	}
 }

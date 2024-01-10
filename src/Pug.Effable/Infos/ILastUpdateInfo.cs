@@ -7,10 +7,26 @@ namespace Pug.Effable
 	public interface ILastUpdateInfo<TEntityVersionUser>
 	{
 		[DataMember(IsRequired = true)]
-		DateTime LastUpdateTimestamp { get; set; }
+		DateTime LastUpdateTimestamp 
+	{
+		get;
+#if NETSTANDARD2_0
+		set;
+#else
+		init;
+#endif
+	}
 
 		[DataMember(IsRequired = true)]
-		TEntityVersionUser LastUpdateUser { get; set; }
+		TEntityVersionUser LastUpdateUser 
+	{
+		get;
+#if NETSTANDARD2_0
+		set;
+#else
+		init;
+#endif
+	}
 	}
 	
 	[Obsolete("Use the more generic IActionContext interface instead.")]

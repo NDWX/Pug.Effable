@@ -15,15 +15,47 @@ namespace Pug.Effable
 	public class LastModificationInfo<TEntityVersionUser> : ILastModificationInfo<TEntityVersionUser>
 	{
 		[DataMember(IsRequired = true)]
-		public DateTime LastUpdateTimestamp { get; set; }
+		public DateTime LastUpdateTimestamp 
+	{
+		get;
+#if NETSTANDARD2_0
+		set;
+#else
+		init;
+#endif
+	}
 		
 		[DataMember(IsRequired = true)]
-		public TEntityVersionUser LastUpdateUser { get; set; }
+		public TEntityVersionUser LastUpdateUser 
+	{
+		get;
+#if NETSTANDARD2_0
+		set;
+#else
+		init;
+#endif
+	}
 		
 		[DataMember(IsRequired = true)]
-		public TEntityVersionUser LastModificationUser { get; set; }
+		public TEntityVersionUser LastModificationUser 
+	{
+		get;
+#if NETSTANDARD2_0
+		set;
+#else
+		init;
+#endif
+	}
 		
 		[DataMember(IsRequired = true)]
-		public DateTime LastModificationTimestamp { get; set; }
+		public DateTime LastModificationTimestamp 
+	{
+		get;
+#if NETSTANDARD2_0
+		set;
+#else
+		init;
+#endif
+	}
 	}
 }

@@ -12,7 +12,11 @@ namespace Pug.Effable
 		IDictionary<K, TAttributeInfo> Attributes
 		{
 			get;
-			set;
+#if NETSTANDARD2_0
+		set;
+#else
+			init;
+#endif
 		}
 	}
 }

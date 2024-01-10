@@ -4,20 +4,28 @@ using System.Runtime.Serialization;
 namespace Pug.Effable
 {
 	[Obsolete("Use the more generic IActionContext interface instead.")]
-	public interface ILastModificationInfo<TEntityVersionUser> : ILastUpdateInfo<TEntityVersionUser>
+	public interface ILastModificationInfo<TEntityVersionUser> : IActionContext<TEntityVersionUser>
 	{
 		[DataMember(IsRequired = true)]
 		TEntityVersionUser LastModificationUser
 		{
 			get;
-			set;
+#if NETSTANDARD2_0
+		set;
+#else
+			init;
+#endif
 		}
 
 		[DataMember(IsRequired = true)]
 		DateTime LastModificationTimestamp
 		{
 			get;
-			set;
+#if NETSTANDARD2_0
+		set;
+#else
+			init;
+#endif
 		}
 	}
 }

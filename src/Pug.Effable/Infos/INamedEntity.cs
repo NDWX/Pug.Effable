@@ -6,10 +6,14 @@ namespace Pug.Effable
 	{
 		[DataMember(IsRequired = true)]
         new TName Name
-        {
-            get;
-            set;
-        }
+		{
+			get;
+#if NETSTANDARD2_0
+		set;
+#else
+			init;
+#endif
+		}
 	}
 
 	public interface INamedEntity : INamedEntity<string, string>
