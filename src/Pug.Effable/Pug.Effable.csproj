@@ -7,16 +7,16 @@
         <Authors>Andrian</Authors>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageTags>Pug Domain Entity Framework Library</PackageTags>
-        <Version>3.0.0</Version>
-        <FileVersion>3.0.0</FileVersion>
-        <AssemblyVersion>3.0.0</AssemblyVersion>
-	    <PackageVersion>3.0.0</PackageVersion>
+        <Version>3.0.1</Version>
+        <FileVersion>3.0.1</FileVersion>
+        <AssemblyVersion>3.0.1</AssemblyVersion>
+	    <PackageVersion>3.0.1</PackageVersion>
 	    <PackageLicenseExpression>APL-1.0</PackageLicenseExpression>
 	    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
 	    <RepositoryType>git</RepositoryType>
 	    <RepositoryUrl>https://github.com/PugCS/Pug.Dome.git</RepositoryUrl>
         <PackageReleaseNotes>
-            Added support for .NET 5.0 and removed support for NETStandard 1.3.
+            Reference types IEquatable implementation.
 		</PackageReleaseNotes>
     </PropertyGroup>
 
