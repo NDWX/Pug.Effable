@@ -1,9 +1,11 @@
+using System;
+
 namespace Pug.Effable
 {
 	/// <summary>
 	/// Describes link to another entity of the same or different type
 	/// </summary>
-	public interface IReference
+	public interface IReference : IEquatable<IReference>
 	{
 		/// <summary>
 		/// TYpe of entity being referenced
