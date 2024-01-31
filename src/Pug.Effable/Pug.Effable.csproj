@@ -6,7 +6,7 @@
         <Title>Pug.Effable</Title>
         <Authors>Andrian</Authors>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <PackageTags>Pug Domain Entity Framework Library</PackageTags>
+        <PackageTags>Pug Object Description Framework Library</PackageTags>
         <Version>3.0.3</Version>
         <FileVersion>3.0.3</FileVersion>
         <AssemblyVersion>3.0.3</AssemblyVersion>
@@ -14,7 +14,7 @@
         <PackageLicenseExpression>APL-1.0</PackageLicenseExpression>
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
         <RepositoryType>git</RepositoryType>
-        <RepositoryUrl>https://github.com/PugCS/Pug.Dome.git</RepositoryUrl>
+        <RepositoryUrl>https://github.com/PugCS/Pug.Effable.git</RepositoryUrl>
         <PackageReleaseNotes>
             Added new IEntity interface without info property and fixed actionable interfaces to use IActionContext.
         </PackageReleaseNotes>
