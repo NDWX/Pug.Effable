@@ -1,40 +1,40 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-	    <TargetFrameworks>netstandard2.0; net5.0</TargetFrameworks>
+        <TargetFrameworks>netstandard2.0; net5.0</TargetFrameworks>
         <LangVersion>11</LangVersion>
         <Title>Pug.Effable</Title>
         <Authors>Andrian</Authors>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageTags>Pug Domain Entity Framework Library</PackageTags>
-        <Version>3.0.1</Version>
-        <FileVersion>3.0.1</FileVersion>
-        <AssemblyVersion>3.0.1</AssemblyVersion>
-	    <PackageVersion>3.0.1</PackageVersion>
-	    <PackageLicenseExpression>APL-1.0</PackageLicenseExpression>
-	    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-	    <RepositoryType>git</RepositoryType>
-	    <RepositoryUrl>https://github.com/PugCS/Pug.Dome.git</RepositoryUrl>
+        <Version>3.0.2</Version>
+        <FileVersion>3.0.2</FileVersion>
+        <AssemblyVersion>3.0.2</AssemblyVersion>
+        <PackageVersion>3.0.2</PackageVersion>
+        <PackageLicenseExpression>APL-1.0</PackageLicenseExpression>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+        <RepositoryType>git</RepositoryType>
+        <RepositoryUrl>https://github.com/PugCS/Pug.Dome.git</RepositoryUrl>
         <PackageReleaseNotes>
-            Reference types IEquatable implementation.
-		</PackageReleaseNotes>
+            New IEntity interface without info property.
+        </PackageReleaseNotes>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-      <DocumentationFile>bin\Release\Pug.Effable.xml</DocumentationFile>
+        <DocumentationFile>bin\Release\Pug.Effable.xml</DocumentationFile>
     </PropertyGroup>
 
     <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
-      <PackageReference Include="System.Runtime.Serialization.Primitives" Version="4.3.0" />
+        <PackageReference Include="System.Runtime.Serialization.Primitives" Version="4.3.0" />
     </ItemGroup>
 
     <ItemGroup>
-      <Compile Remove="Infos\ILastUpdateInfo.cs" />
-      <Compile Remove="Infos\IUpdateInfo.cs" />
-      <Compile Remove="Infos\LastLastUpdateInfo.cs" />
-      <Compile Remove="Infos\LastModificationInfo.cs" />
-      <Compile Remove="Infos\ICreationInfo.cs" />
-      <Compile Remove="Infos\CreationInfo.cs" />
-      <Compile Remove="IReferenceInfo.cs" />
+        <Compile Remove="Infos\ILastUpdateInfo.cs" />
+        <Compile Remove="Infos\IUpdateInfo.cs" />
+        <Compile Remove="Infos\LastLastUpdateInfo.cs" />
+        <Compile Remove="Infos\LastModificationInfo.cs" />
+        <Compile Remove="Infos\ICreationInfo.cs" />
+        <Compile Remove="Infos\CreationInfo.cs" />
+        <Compile Remove="IReferenceInfo.cs" />
     </ItemGroup>
 </Project>

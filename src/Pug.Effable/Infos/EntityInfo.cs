@@ -3,24 +3,27 @@
 namespace Pug.Effable
 {
 	[DataContract]
-	public abstract class EntityInfo<TIdentifier/*, TEntityVersionUser*/> : IEntityInfo<TIdentifier/*, TEntityVersionUser*/>
+	public abstract class
+		EntityInfo<TIdentifier /*, TEntityVersionUser*/> : IEntityInfo<TIdentifier /*, TEntityVersionUser*/>
 	{
-		protected EntityInfo() { }
-		
-		protected EntityInfo(TIdentifier identifier)
+		protected EntityInfo()
+		{
+		}
+
+		protected EntityInfo( TIdentifier identifier )
 		{
 			this.Identifier = identifier;
 		}
 
-		[DataMember(IsRequired = true)]
-		public TIdentifier Identifier 
-	{
-		get;
+		[DataMember( IsRequired = true )]
+		public TIdentifier Identifier
+		{
+			get;
 #if NETSTANDARD2_0
-		set;
+			set;
 #else
 		init;
 #endif
-	}
+		}
 	}
 }
