@@ -1,8 +1,8 @@
 ﻿namespace Pug.Effable
 {
-	public interface IModifiable<TEntityVersionUser, TModificationInfo> where TModificationInfo : ILastModificationInfo<TEntityVersionUser>
+	public interface IModifiable<TEntityVersionUser, TModificationInfo> where TModificationInfo : IActionContext<TEntityVersionUser>
 	{
-		TModificationInfo LastModificationInfo
+		TModificationInfo LastModification
 		{
 			get;
 #if NETSTANDARD2_0
