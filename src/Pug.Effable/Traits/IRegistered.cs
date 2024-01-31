@@ -1,8 +1,8 @@
 ﻿namespace Pug.Effable
 {
-	public interface IRegistered<TEntityVersionUser, TRegistrationInfo> where TRegistrationInfo : IRegistrationInfo<TEntityVersionUser>
+	public interface IRegistered<TEntityVersionUser, TRegistrationInfo> where TRegistrationInfo : IActionContext<TEntityVersionUser>
 	{
-		TRegistrationInfo RegistrationInfo 
+		TRegistrationInfo Registration 
 	{
 		get;
 #if NETSTANDARD2_0

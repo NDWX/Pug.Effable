@@ -2,7 +2,7 @@
 {
 	public interface IUpdatable<TEntityVersionUser, TUpdateInfo> where TUpdateInfo : IActionContext<TEntityVersionUser>
 	{
-		TUpdateInfo LastUpdateInfo 
+		TUpdateInfo LastUpdate
 	{
 		get;
 #if NETSTANDARD2_0
