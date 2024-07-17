@@ -4,12 +4,18 @@ using System.Runtime.Serialization;
 namespace Pug.Effable
 {
 	[DataContract]
-	public class ActionContext<TUser> : IActionContext<TUser>
+	public class ActionContext<TActor> : IActionContext<TActor>
 	{
 		[DataMember(IsRequired = true)]
-		public TUser User { get; set; }
+		public TActor Actor { get; set; }
 		
 		[DataMember(IsRequired = true)]
 		public DateTime Timestamp { get; set; }
+	}
+
+	[DataContract]
+	public class ActionContext : ActionContext<string>, IActionContext
+	{
+		
 	}
 }
